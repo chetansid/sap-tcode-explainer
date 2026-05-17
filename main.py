@@ -21,7 +21,7 @@ def explain_tcode(tcode: str):
     except Exception as e:
         return {"error": str(e)}
 @app.get("/tcodes/{module}")
-def explain_tcode(module: str):
+def list_tcodes_by_module(module: str):
     try:
         response = client.chat.completions.create(
             model="gpt-4o-mini",
@@ -34,7 +34,7 @@ def explain_tcode(module: str):
     except Exception as e:
         return {"error": str(e)}
 @app.get("/troubleshoot/{tcode}")
-def explain_tcode(tcode: str):
+def troubleshoot_tcode(tcode: str):
     try:
         response = client.chat.completions.create(
             model="gpt-4o-mini",
