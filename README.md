@@ -19,4 +19,6 @@ transaction codes, explore modules, and troubleshoot common errors.
 2. Create a `.env` file with `OPENAI_API_KEY=your-key`
 3. Run `pip install fastapi uvicorn openai python-dotenv`
 4. Run `uvicorn main:app --reload`
-5. Visit `http://localhost:8000/docs`
+5. Visit `https://sap-tcode-explainer.onrender.com/docs`
+
+
