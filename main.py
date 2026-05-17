@@ -40,7 +40,7 @@ def troubleshoot_tcode(tcode: str):
             model="gpt-4o-mini",
             messages=[{
                 "role": "user",
-                "content": f"Troubleshoot using SAP transaction code {tcode}. Include: what it does, when to use it, and one common mistake beginners make."
+                "content": f"For SAP transaction code {tcode}, list: 3 common errors or problems users encounter, what causes each error, and exactly how to fix it."
             }]
         )
         return {"tcode": tcode, "explanation": response.choices[0].message.content}
